@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Header con posicionamineto fixed</title>
+        <style>
+            body {
+                margin: auto;
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    Roboto,
+                    Oxygen,
+                    Ubuntu,
+                    Cantarell,
+                    "Open Sans",
+                    "Helvetica Neue",
+                    sans-serif;
+                height: 200%;
+                color: black;
+            }
+            .contenedor {
+                position: relative;
+                width: 80%;
+                max-width: 800px;
+                margin: 20px auto;
+
+                article {
+                    background: whitesmoke;
+                    columns: 2;
+                    column-gap: 10px; /* Removed dotted gray for better readability */
+                    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5); /* Corrected alpha value */
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Corrected alpha value */
+                    border-radius: 10px;
+                    border: 2px solid blue;
+                    padding: 15px; /* Added some padding */
+                }
+            }
+            .nota-flotante {
+                position: absolute;
+                top: 30px;
+                right: -70px;
+                background: yellow;
+                padding: 15px;
+                width: 150px;
+                text-align: center;
+                /* A simpler shape that looks like a note */
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+                transform: rotate(8deg); /* Corrected unit to 'deg' */
+                transition: transform 0.3s ease;
+                &:hover {
+                    transform: rotate(9deg) scale(1);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Moved article and nota-flotante inside the container -->
+        <div class="contenedor">
+            Logo
+            <main>
+                <article>
+                    <h2>articulo independiente</h2>
+                    <p>
+                        fuishaguieabgrluirehgueiñaghsuieshguieshgeyiusghyeisbghejsbghejbghjebghjesbghjesvgjhegvjh
+                    </p>
+                    <p>afuohsuilghiulyearhguielhrguileghuielgh</p>
+                </article>
+            </main>
+            <div class="nota-flotante">nota flotante</div>
+        </div>
+    </body>
+</html>

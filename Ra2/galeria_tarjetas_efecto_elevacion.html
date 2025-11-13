@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Galeria de tarjetas con efecto elevado. Galeria de tarjetas que
+            cambia de fila a columna, con efecto elevacion al hover y animacion
+            de entrada
+        </title>
+        <link rel="stylesheet" href="CSS/formularioTabla.css" />
+        <style>
+            .galeria {
+                display: flex;
+                flex-wrap: wrap;
+                border: 1px solid black;
+                justify-content: center;
+                padding: 20px;
+                .tarjeta {
+                    background-color: red;
+                    padding: 20px;
+                    border-radius: 10px;
+                    flex: 1 1 280px;
+                    text-align: center;
+                    color: white;
+                    transition: transform 0.5s ease;
+                    &:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+                        color: violet;
+                    }
+                }
+                @media (width<=600px) {
+                    .tarjeta {
+                        flex: 1 1 100%;
+                        background-color: orange;
+                    }
+                }
+                @media not (width<=1024px) {
+                    .tarjeta {
+                        flex: 1 1 20%;
+                        background-color:green;
+                    }
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="galeria">
+            <div class="tarjeta">producto1</div>
+            <div class="tarjeta">producto2</div>
+            <div class="tarjeta">producto3</div>
+            <div class="tarjeta">producto4</div>
+            <div class="tarjeta">producto5</div>
+        </div>
+    </body>
+</html>

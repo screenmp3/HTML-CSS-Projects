@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>% es relativa al padre. vmin/vmax usan el menor/mayor entre vw y vh</title>
+    <style>
+        .container-percent{
+            width: 100%;
+            background: linear-gradient(to left, #9b59b6, #8e44ad);/*la dirección del degradado comienza visualmente de derecha con el color más claro hacia la izquierda con el color más oscuro */
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+        }
+        .square-vmin{
+            width: 50vmin;
+            height: 50vmin;
+            background: radial-gradient(circle, #e74c3c,#c0392b);
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-percent">100% del padre con un degradado</div>
+    <div class="square-vmin">Cuadrado 50vmin</div>
+    <!--1vmin= 1% del lado más pequeño del viewport(ventana del navegador)
+    1vmax=1% del lado más grande del viewport, ejemplo supongamos que tu pantalla mide un ancho 1200px y un alto de 800px entonces 1vmin= 1% de 800=8px y 1vmax=1% de 1200=12px, en el ejemplo que hemos puesto sería 50vmin sería 50 x 8px= 400px, esto significa que el cuadrado será ancho y alto iguales (cuadrado perfecto), su tamaño será 50% del lado más pequeño de la ventana del navegador, así el cuadrado se mantiene siempre proporcionado, sin deformarse, aunque cambie el tamaño de la pantalla-->
+    
+</body>
+</html>

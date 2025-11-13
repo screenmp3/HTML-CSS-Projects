@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes en HTML y CSS3</title>
+    <style>
+        .img-simple{
+            width: 200px;
+            border: 3px solid #3498db;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .img-cover{
+           width: 150px; 
+           height: 150px;
+
+        }
+    </style>
+</head>
+<body>
+    <!--usa etiquetas como img y picture para imágenes. css controla propiedades como tamaño, ajuste, filtros, etc.los ejemplos usan una imagen real de Internet, img con los atributos src y alt, y picture con source para diferentes tamaños o formatos-->
+    <p>Imagen simple con estilo, muestra una imagen de 200px con borde y sombra</p>
+    <img class="img-simple" src="https://picsum.photos/200/150" alt="Paisaje">
+    <p>Picture responsive</p>
+    <!--la etiqueta picture, sirve para mostrar imágenes responsivas, que cambian según el tamaño de la pantalla o las condiciones del dispositivo-->
+    <picture>
+        <source media="(min-width:600px)" srcset="https://picsum.photos/300/200">
+        <img src="https://picsum.photos/150/100" alt="Paisaje responsivo"><!--Esta sería la imágen por defecto o de respaldo, se mostrará si no se cumple ninguna de las condiciones de source o si el navegador no soporta la etiqueta picture. Cambia la imagen según el ancho de la pantalla-->
+    </picture>
+   
+</body>
+</html>

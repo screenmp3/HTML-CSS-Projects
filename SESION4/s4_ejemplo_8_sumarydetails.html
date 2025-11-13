@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acordeón con Posicionamiento y filtros</title>
+    <style>
+        details{
+            border: 1px solid black;
+            position: relative;
+            background: #e0e0e0;
+            padding: 10px;
+            summary{
+                cursor: pointer;
+                font-weight: bold;
+            }
+            .absolute-info{
+                position: absolute;
+                top: -5px;
+                right: 0;
+                background-color: red;
+                color: white;
+                padding: 10px;
+                pointer-events: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <br><br><br>
+    <details>
+        <!-- Las etiquetas HTML <details> y <summary> se utilizan juntas para crear secciones desplegables (acordeones) sin necesidad de JavaScript. Son muy útiles para mostrar información adicional o explicaciones que el usuario puede expandir o contraer.
+        <details>: crea el contenedor desplegable.
+
+<summary>: define el encabezado o el texto visible que, al hacer clic, abre o cierra el contenido.-->
+        <summary>Haz clic para expandir. soy el título </summary>
+        <p>Contenido oculto.</p>
+        <div class="absolute-info">Info</div>
+    </details>
+</body>
+</html>

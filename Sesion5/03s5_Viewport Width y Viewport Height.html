@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner responsive en vh y vw</title>
+</head>
+<style>
+    .banner-vw{
+       
+        width: 50vw;
+        height: 20vh;
+        background: linear-gradient(135deg, #f1c40f, #f39c12);/*en diagonal desde la esquina superior izquierda hacia la esquina inferior derecha
+        0deg → El degradado va de abajo hacia arriba.
+
+90deg → De izquierda a derecha.
+
+180deg → De arriba hacia abajo.
+
+270deg → De derecha a izquierda.
+
+45deg, 135deg, 225deg, etc. → Degradados en diagonal, que suelen verse más elegantes o modernos.*/
+color: white;
+border-radius: 10px;
+    }
+    .title-vh{
+        font-size: 5vh;/*Titulo que escala con la altura de la ventana*/
+        color: #c0392b;
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+<body>
+     <div class="banner-vw">Banner 50vw x 20vh son relativas al tamaño de la ventana del navegador 1vw=1% perfectas para el diseño responsive</div>
+     <h2 class="title-vh">Título dinámico en vh</h2>
+    
+</body>
+</html>

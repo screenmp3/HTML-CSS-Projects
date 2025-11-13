@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de main, header, footer con encabezado sticky</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 200vh;
+        }
+        .sticky-header{
+            position: sticky;
+            top: 0px;
+            background-color: gray;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        main{
+            background: linear-gradient(to bottom, green, white);
+            padding: 30px;
+            min-height: 200px;
+            height: 400px;
+            border: 1px solid black;
+            overflow: hidden;
+            resize: vertical;/*overflow y resize van de la mano el primero oculta lo sobrante del contenedor y sesize permite redimensionar en este caso 
+            la altura*/
+        }
+        .fixed-bar{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: gray;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+     <header class="sticky-header">Encabezado Sticky</header>
+    <main>
+        <article class="content">
+            <h1>Contenido Principal</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, quaerat eius libero assumenda nemo, a deserunt nobis nihil tempora consequatur quasi! Debitis, quasi reiciendis quas architecto natus consequatur? Itaque dicta ex rem consequuntur vel neque doloremque dolores at ipsum magni.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores rem consequuntur totam adipisci amet maxime ipsam pariatur quidem corporis molestias ut accusantium reiciendis sapiente tempora magni dolore dolor dolorum, deleniti nihil nostrum veritatis facere repellat! Nostrum, dicta saepe? Asperiores provident dolore beatae ex suscipit ipsum ut vero earum, assumenda, molestiae, dolores distinctio animi atque id autem omnis voluptas! Perferendis, sit?</p>
+            
+            
+        </article>
+    </main>
+    <footer class="fixed-bar">Pie Fijo
+</body>
+</html>
+

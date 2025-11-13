@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registro de Usuario</title>
+        <link rel="stylesheet" href="CSS/formularioTabla.css" />
+    </head>
+    <body>
+        <div class="container">
+            <fieldset>
+                <legend>Registro de usuario</legend>
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="fnombre">Nombre completo:</label>
+                                <input
+                                    type="text"
+                                    id="fnombre"
+                                    name="fnombre"
+                                    placeholder="Ingresa tu nombre"
+                                    required
+                                />
+                            </td>
+                            <td>
+                                <label for="apellidos">Apellidos:</label>
+                                <input
+                                    type="text"
+                                    id="apellidos"
+                                    name="apellidos"
+                                    placeholder="Ingresa tus apellidos"
+                                    style="
+                                        background-color: white;
+                                        border-color: #48bb78;
+                                    "
+                                    required
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="correo">Correo electrónico:</label>
+                                <input
+                                    type="email"
+                                    id="correo"
+                                    name="correo"
+                                    placeholder="tu@ejemplo.com"
+                                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                                    required
+                                />
+                            </td>
+                            <td>
+                                <label for="clave">Contraseña:</label>
+                                <input
+                                    type="password"
+                                    id="clave"
+                                    name="clave"
+                                    placeholder="Ingresa tu contraseña"
+                                    minlength="8"
+                                    maxlength="20"
+                                    required
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="fnac">Fecha de nacimiento:</label>
+                                <input
+                                    type="date"
+                                    id="fnac"
+                                    name="fnac"
+                                    required
+                                />
+                            </td>
+                            <td>
+                                <label for="telefono">Teléfono:</label>
+                                <input
+                                    type="tel"
+                                    id="telefono"
+                                    name="telefono"
+                                    placeholder="123456789"
+                                    pattern="[0-9]{9}"
+                                    style="
+                                        background-color: white;
+                                        border-color: #48bb78;
+                                    "
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="web">Sitio web:</label>
+                                <input
+                                    type="url"
+                                    id="web"
+                                    name="web"
+                                    placeholder="https://ejemplo.com"
+                                />
+                            </td>
+                            <td>
+                                <label for="color">Color favorito:</label>
+                                <input
+                                    type="color"
+                                    id="color"
+                                    name="color"
+                                    value="#ff0000"
+                                    style="border-color: #48bb78"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="edad">Edad:</label>
+                                <input
+                                    type="number"
+                                    id="edad"
+                                    name="edad"
+                                    value="18"
+                                    min="1"
+                                    max="100"
+                                    style="
+                                        background-color: white;
+                                        border-color: #48bb78;
+                                    "
+                                />
+                            </td>
+                            <td>
+                                <label>Género:</label>
+                                <div class="radio-group">
+                                    <div class="radio-option">
+                                        <input
+                                            type="radio"
+                                            id="masculino"
+                                            name="genero"
+                                            value="masculino"
+                                        />
+                                        <label for="masculino">Masculino</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input
+                                            type="radio"
+                                            id="femenino"
+                                            name="genero"
+                                            value="femenino"
+                                        />
+                                        <label for="femenino">Femenino</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input
+                                            type="radio"
+                                            id="otro"
+                                            name="genero"
+                                            value="otro"
+                                        />
+                                        <label for="otro">Otro</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="checkbox-container">
+                                    <input
+                                        type="checkbox"
+                                        id="termino"
+                                        name="termino"
+                                        required
+                                    />
+                                    <label for="termino"
+                                        >Acepto los términos y
+                                        condiciones</label
+                                    >
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="submit-container">
+                                <input type="submit" value="Enviar Registro" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </fieldset>
+        </div>
+    </body>
+</html>

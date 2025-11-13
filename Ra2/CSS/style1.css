@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+}
+h1 {
+    color: whitesmoke;
+}
+h2 {
+    color: whitesmoke;
+}
+p {
+    color: whitesmoke;
+}
+hr {
+    border: none;
+    height: 4px;
+    background: grey;
+    margin: 20px 0;
+}
+.imagecenter {
+    display: block;
+    margin: 0 auto;
+}
+.prelike {
+    white-space: pre;
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+    color: #dfe7ff;
+}

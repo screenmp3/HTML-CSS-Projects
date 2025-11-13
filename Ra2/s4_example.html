@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Header con posicionamineto fixed</title>
+        <style>
+            body {
+                margin: auto;
+                height: 200%;
+                color: white;
+                text-shadow: 2px 2px 4px red;
+            }
+            .fixed-logo {
+                border: 1px solid black;
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                background: red;
+                text-shadow: 0px 0px 3px yellow;
+                padding: 5px;
+                border-radius: 50%;
+                z-index: 1;
+            }
+            .fondo {
+                border: 2px dashed black;
+                height: 100vh;
+                width: 100vh;
+                position: relative;
+                background-image: url(images/yesMan.jpg);
+                background-position: center;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .fondo header {
+                position: absolute;
+                font-size: 4vh;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                top: 50%;
+                text-align: center;
+            }
+            section {
+                height: 400px;
+                color: black;
+                font-size: 3vh;
+                text-shadow: none;
+                text-align: justify;
+                text-indent: 30px;
+                line-height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="fixed-logo">Logo</div>
+        <div class="fondo">
+            <header>El mundo del paraguas</header>
+        </div>
+        <section>
+            <p>lorem lorem lorem lorem lorem</p>
+        </section>
+    </body>
+</html>

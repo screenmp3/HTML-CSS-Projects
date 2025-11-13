@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta con ancho en px</title>
+</head>
+<style>
+    .card-px{
+        border: 1px solid red;
+        width: 200px;
+        height: 120px
+        ;
+        background: linear-gradient(45deg, #ff6b6b,#ff8e53);/*es un degradado lineal, 45º significa que el color irá desde la esquina superior izquierda hasta la esquina inferior derecha, esto hace que la página tenga un fondo degradado suave y moderno*/
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3); /*significa que la sombra no se mueve ni a la izquierda ni a la derecha, la sombra se mueve hacia abajo 4px y 8px de desenfoque blur(cuanto mayor es este valor más difusa será la sombra). rgba(0, 0,0) significa color negro y 0.2 indica opacidad, es decir una sombra negra, bastante suave*/
+    }
+    .btn-px{
+        margin: 20px;
+        padding: 10px 20px;
+        background: #4caf50;
+        color: white;
+        &:hover{
+            background: #45a049;
+        }
+    }
+    .title-px{
+        font-size: 28px;
+        color: #023e50; 
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+       }
+
+</style>
+<body>
+    <div class="card-px">Tarjeta con un ancho fijo 200px con un degradado y sombra suave, </div>
+    <button class="btn-px">Botón con margen de 20px y efecto hover</button>
+    <h2 class="title-px">Título con tamaño de fuente fijo en px, 28px y estilo moderno</h2>
+</body>
+</html>

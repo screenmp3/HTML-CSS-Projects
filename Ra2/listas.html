@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width,
+        initial-scale=1.0"
+        />
+        <title>listas</title>
+        <style>
+            ul {
+                list-style-type: none;
+                padding-left: 10px;
+                margin: 10px 0%;
+            }
+            li {
+                margin-bottom: 5px;
+                &::before {
+                    content: "";
+                    color: black;
+                }
+                &::after {
+                    content: "-completo";
+                    color: lightgray;
+                    font-style: italic;
+                }
+            }
+            table {
+                border-spacing: 5px;
+                border: 1px solid black;
+                width: 50%;
+
+                ol {
+                    list-style-type: upper-alpha;
+                    counter-reset: inherit;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Pasos</th>
+            </tr>
+            <tr>
+                <td>
+                    <ol type="A" start="3">
+                        <li>paso c</li>
+                        <li>paso d</li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+        <ul>
+            <li>item1</li>
+            <li>item1</li>
+            <li>item1</li>
+        </ul>
+        <br />
+        <ul>
+            <li>Enero</li>
+            <li>Febrero</li>
+            <li>Marzo</li>
+        </ul>
+    </body>
+</html>

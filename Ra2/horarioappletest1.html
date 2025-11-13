@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horario</title>
+<style>
+  /* Fuente estilo Apple (SF Pro si está disponible) */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+    background: linear-gradient(180deg, #f5f5f7, #e8e8ed);
+    margin: 0;
+    padding: 40px;
+    color: #1d1d1f;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.4);
+  }
+
+  .header {
+    background: rgba(245,245,247,0.7);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    text-align: center;
+    padding: 16px 0;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #1d1d1f;
+  }
+
+  .horario {
+    display: grid;
+    grid-template-columns: 120px repeat(5, 1fr);
+    border-collapse: collapse;
+  }
+
+  .horario div {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-right: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .horario div:last-child {
+    border-right: none;
+  }
+
+  .cabecera {
+    background: rgba(240,240,245,0.8);
+    font-weight: 600;
+    color: #555;
+  }
+
+  .hora {
+    font-weight: 500;
+    background: rgba(250,250,255,0.6);
+  }
+
+  .clase {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #dfe9ff, #c6d6ff);
+    color: #1a1a1a;
+    font-weight: 500;
+    box-shadow: inset 0 0 5px rgba(255,255,255,0.6);
+  }
+
+  /* Colores alternativos suaves tipo macOS pastel */
+  .azul { background: linear-gradient(180deg, #d7e8ff, #c2dbff); }
+  .verde { background: linear-gradient(180deg, #d8f5dc, #c0ebc8); }
+  .amarillo { background: linear-gradient(180deg, #fff6cc, #ffef99); }
+  .rosa { background: linear-gradient(180deg, #ffe2ec, #ffd0df); }
+  .lila { background: linear-gradient(180deg, #ede6ff, #e0d7ff); }
+
+  /* Responsivo */
+  @media (max-width: 700px) {
+    .horario {
+      grid-template-columns: 90px repeat(5, 1fr);
+      font-size: 0.9em;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .horario {
+      display: block;
+    }
+    .horario div {
+      display: inline-block;
+      width: calc(100% / 2 - 4px);
+      margin: 2px;
+      border-radius: 10px;
+    }
+    .cabecera, .hora { display: none; }
+  }
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">Horario Semanal</div>
+    <div class="horario">
+      <div class="cabecera">Hora</div>
+      <div class="cabecera">Lunes</div>
+      <div class="cabecera">Martes</div>
+      <div class="cabecera">Miércoles</div>
+      <div class="cabecera">Jueves</div>
+      <div class="cabecera">Viernes</div>
+
+      <div class="hora">08:00–09:00</div>
+      <div class="clase azul">Matemáticas</div>
+      <div class="clase verde">Física</div>
+      <div class="clase rosa">Lengua</div>
+      <div class="clase lila">Inglés</div>
+      <div class="clase amarillo">Historia</div>
+
+      <div class="hora">09:00–10:00</div>
+      <div class="clase verde">Química</div>
+      <div class="clase lila">Biología</div>
+      <div class="clase azul">Deporte</div>
+      <div class="clase rosa">Arte</div>
+      <div class="clase amarillo">Música</div>
+    </div>
+  </div>
+</body>
+</html>

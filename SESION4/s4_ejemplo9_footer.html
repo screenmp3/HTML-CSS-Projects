@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Fixed con gradiantes</title>
+    <style>
+        body{
+            margin: 0;
+            height: 200vh;
+            
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            border: 2px solid black;
+            width: 100%;
+            background: url(fondo.jpeg) center/cover, linear-gradient(#000, #fff);/*un degradado de negro a blanco*/
+            background-blend-mode: screen;/*esta propiedad controla cómo se mezclan las capas superpuestas, el modo screen aclara la imagen (combina el gradiante(negro y blanco) con la imagen de fondo dando como resultado un tono más claro*/
+            color: black;
+            text-align: center;
+            font-weight: bolder;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <p>&copy; 2025 - Footer Chulo</p>
+    </footer>
+</body>
+</html>

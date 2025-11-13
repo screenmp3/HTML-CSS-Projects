@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Link in images</title>
+
+        <style>
+            body {
+                margin: 0;
+                font-family: sans-serif;
+                height: 200vh;
+            }
+            .absolute-container {
+                position: relative;
+                border: 2px gray;
+                margin: 20px;
+                padding: 40px;
+                background-color: beige;
+                height: 20px;
+                .absolute-box {
+                    border: 1px solid greenyellow;
+                    position: absolute;
+                    top: 30px;
+                    left: 10px;
+                    padding: 15px;
+                    margin: 5%;
+
+                    background-color: green;
+                    z-index: 1000;
+                }
+            }
+            /*fixed-box*/
+            .fixed-box {
+                border: 1px solid black;
+                position: fixed;
+                top: 30px;
+                left: 10px;
+                padding: 15px;
+
+                background-color: brown;
+                z-index: 1000;
+            }
+            .relative-box {
+                border: 1px solid blue;
+                position: relative;
+                top: 40px;
+                left: 10px;
+                padding: 15px;
+                margin: 5%;
+
+                background-color: purple;
+                z-index: 1000;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="fixed-box">
+            Caja <strong>Fixed</strong> <br />
+            siempre visible
+        </div>
+
+        <div class="relative-box">
+            Caja <strong>Relativa</strong> <br />
+            desplazado 20px de su posicion por defecto
+        </div>
+
+        <div class="absolute-container">
+            Contenedor con relative
+            <div class="absolute-box">
+                Caja <strong>Absolute</strong> con posicionamiento <br />
+                dentro del contenedor
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Ejemplo de aside con nav, contenido relacionado pero secundario,
+            como sidebars. Para colocar datos importantes entre otras cosas
+        </title>
+        <style>
+            body {
+                margin: 0;
+                height: 300vh;
+            }
+            .contenido {
+                width: 90%;
+                max-width: 1000px;
+                margin: 0 auto;
+                position: relative;
+                border: 1px solid red;
+
+                main {
+                    padding: 20px;
+                    margin-right: 250px;
+                    position: absolute;
+                    background-color: aqua;
+                    border: 2px solid black;
+                }
+
+                aside {
+                    /* background:#f0f0f0 ;*/
+                    background-color: red;
+                    top: 0px;
+                    width: 250px;
+                    height: 150vh;
+                    position: absolute;
+                    right: 0;
+                    nav {
+                        position: sticky;
+                        top: 50px;
+                        ul {
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                            li {
+                                padding: 5px;
+                                a {
+                                    text-decoration: none;
+                                    color: #333;
+                                    font-weight: bold;
+                                    display: block; /*estas dos propiedades van de la mano display con tex align*/
+                                    text-align: center;
+                                    transition: color 0.3s ease;
+                                    &:hover {
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .fixed-footer {
+                position: fixed; /* Fijo en la parte inferior */
+                bottom: 0;
+                width: 100%;
+                background: #333;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                z-index: 20;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contenido">
+            <main>
+                <h1>Contenido Principal</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                </p>
+                <h2 id="section1">Sección 1</h2>
+                <p>Contenido de la sección 1...</p>
+                <h2 id="section2">Sección 2</h2>
+                <p>Contenido de la sección 2...</p>
+                <h2 id="section3">Sección 3</h2>
+                <p>Contenido de la sección 3...</p>
+            </main>
+            <aside>
+                <nav>
+                    <ul>
+                        <li><a href="#section1">Sección 1</a></li>
+                        <li><a href="#section2">Sección 2</a></li>
+                        <li><a href="#section3">Sección 3</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+        <div class="fixed-footer">Pie de Página Fijo</div>
+    </body>
+</html>

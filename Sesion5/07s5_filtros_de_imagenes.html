@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplica efectos como blur(px), brightness(%), saturate(%), contrast(%), sepia(%), opacity(%), etc.. se pueden combinar</title>
+    <style>
+       .img-blur{
+        width:200 px;        
+        border-radius: 8px;
+        border: 1px solid orange;
+        filter: blur(5px);/*Aplica un desenfoque de 5px a la imagen*/
+       } 
+       .img-bright-contrast{
+        width: 200px;
+        filter: brightness(150%) contrast(200%);
+        border-radius: 8px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+
+       }
+      
+    </style>
+    
+</head>
+<body>
+    <p>efecto blur(desenfoque)</p>
+    <img class="img-blur" src="https://picsum.photos/200/150" alt="Blur">
+    <br>
+    <br>
+    <p>Brillo con contraste, aumenta brillo y contraste para un efecto vibrante</p>
+    <img class="img-bright-contrast" src="https://picsum.photos/200/150"   alt="Bright contrast"><br><br>
+    
+</html>

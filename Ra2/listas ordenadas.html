@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>listas desordenadas con Pseudo elementos</title>
+        <style>
+            ol {
+                list-style-type: none;
+                padding-left: 60px;
+                li {
+                    margin-bottom: 5px;
+                    &::before {
+                        content: "=>";
+                    }
+                    &:nth-child(3n + 1) {
+                        background-color: blueviolet;
+                    }
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <ol>
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+            <li>Item4</li>
+            <li>Item5</li>
+            <li>Item6</li>
+        </ol>
+    </body>
+</html>

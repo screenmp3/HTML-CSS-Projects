@@ -1,0 +1,44 @@
+form {
+    width: auto;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: white;
+    font-family:
+        "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+        Arial, sans-serif;
+
+    input,
+    select {
+        width: auto;
+        padding: 10px;
+        margin-bottom: auto;
+        border: 1px solid white;
+        border-radius: 4px;
+        box-sizing: border-box;
+        &:focus {
+            border-color: blue;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        &:invalid {
+            border-color: red;
+            outline: none;
+        }
+        &:valid {
+            border-color: greenyellow;
+            outline: none;
+        }
+        &:required {
+            background-color: whitesmoke;
+        }
+    }
+    input[type="color"] {
+        width: 50px;
+        height: 35px;
+        border-radius: 4px;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        background-color: transparent;
+    }
+}

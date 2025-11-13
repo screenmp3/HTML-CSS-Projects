@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Unidades de medida,tarjeta pixeles</title>
+        <style>
+            :root {
+                --base-font-size: 18px;
+                --root-font-size: 10px;
+            }
+            .parent-em {
+                font-size: var(--base-font-size);
+                background: grey;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .text-em {
+                font-size: 1.5em;
+                color: #e67e22;
+            }
+            .banner-vw {
+                width: 50vw;
+                height: 20vh;
+                background: linear-gradient(135deg, yellow, red);
+                color: white;
+                font-size: var(--root-font-size);
+                font: 1.5rem;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <div class="parent-em">
+        <p class="text-em">Texto 1.5em (27px)</p>
+    </div>
+    <div class="banner-vw">Banner 50 y 20</div>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video con posicionamiento y efecto CSS3</title>
+</head>
+<style>
+    body{
+        margin: 0;/*elimina el margen predeterminado del navegador para que todo empiece desde el borde de la pantalla*/
+        font-family: Arial, Helvetica, sans-serif;
+        .video-container{
+            position: relative;/*Esto permite que los elementos hijos con position absolute se posicionen alrededor de este contenedor*/
+            height: 100vh;/*toda la altura de la ventana del navegador, se usa full screen, fondos de vídeos e imágenes va con la propiedad overflow y oculta cualquier parte del contenido que se salga del área visible del contenedor*/
+            overflow: hidden;
+            video{
+                position: fixed;/*el vídeo queda fijo al fondo de la pantalla*/
+                top: 0;
+                left: 0;/*El vídeo se alinea con la esquina superior izquierda*/
+                width: 100%;
+                height: 100%;/*cubre toda la pantalla*/
+                object-fit: cover;/*asegura que el video llene toda el área sin deformarse (recorta si es necesario).*/
+                filter: brightness(0.7);/*baja el brillo del video (para que el texto encima sea más legible).*/
+                animation: mostrar 2s ease-in;/*aplica una animación suave para que el video aparezca con efecto de fundido.*/
+                
+            }
+            .overlay{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);/*corrige el punto de anclaje para que esté perfectamente centrado.*/
+                    color:white;
+                    text-align: center;
+                    backdrop-filter: blur(5px);/*desenfoca el fondo detrás del texto, haciendo que se lea mejor.*/
+                    transition: transform 0.3s;/*habilita una animación suave al hacer hover.*/
+
+                    
+                }
+                .overlay:hover{
+                     transform: translate(-50%, -50%) scale(1.1);
+                     /*Cuando pasas el mouse por encima del texto, este se agranda (110%).
+
+El transform mantiene el centrado y agrega el scale(1.1) para el efecto de zoom.*/
+                }
+
+                  @keyframes mostrar { /*preguntar a Javier no veo cambio, el vídeo aparece con una animación de entrada*/
+            from { opacity: 0; }
+            to { opacity: 1; }
+    }
+        }
+     
+}
+</style>
+<body>
+    <!--El div con clase video-container es el contenedor principal que agrupa tanto el vídeo como la capa de texto superpuesta (overlay), las clases se usan para controlar el tamaño, posición y estilo del vídeo y su contenido-->
+     <div class="video-container">
+        <video autoplay muted loop>
+            <source src="video_s4.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <h1>Video Profesional</h1>
+            <p>Explora con CSS3 chulo.</p>
+        </div>
+    </div>
+</body>
+</html>

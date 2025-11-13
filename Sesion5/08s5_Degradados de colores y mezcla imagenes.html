@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degradados de colores y propiedades de mezcla de imágenes</title>
+    <style>
+        .gradient-linear{
+            border: 1px solid black;
+            width: 250px;
+            height: 150px;
+            background-image: linear-gradient(to bottom, #e91e63,#9c27b0 );
+            /* dirección, color1, color2 degradado vertical de rosa a purpura*/
+        }
+        .gradient-diagonal{
+            border: 1px solid black;
+            border-radius: 12px;
+            width: 250px;
+            height: 150px;
+            background-image: linear-gradient(135deg, #f1c40f,#e67e22,#c0392b );
+            /* dirección, color1, color2 degradado vertical de rosa a purpura*/
+        }
+        .gradient-circular{
+            border: 1px solid black;
+            border-radius: 12px;
+            width: 250px;
+            height: 150px;
+            background-image: radial-gradient(circle, #f1c40f,#e67e22,#c0392b );
+            /* forma, color1, color2 */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .gradient-ellipse{
+            border: 1px solid black;
+            border-radius: 12px;
+            width: 250px;
+            height: 150px;
+            background-image: radial-gradient(ellipse at center, #3498db,#2c3350 );
+            /* forma, color1, color2 degradado eliptico de azul a gris oscuro*/
+        }
+        .blend-multiply{
+            border-radius: 12px;
+            border: 1px solid black;
+            width: 250px;
+            height: 150px;
+            background-image: url('background1.jpg'),linear-gradient(to right,#e74c3c, #c0392b);
+            background-blend-mode: multiply;
+        }
+        .blend-screen-container{
+            position: relative;
+            width: 250px;
+            height: 150px;
+            background: #f1c40f;
+            border-radius: 12px;
+            .blend-screen{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #3498db;
+                mix-blend-mode: screen;
+                border-radius: 12px;
+            }
+        }
+        .blend-overlay{
+             border-radius: 12px;
+            border: 1px solid black;
+            width: 250px;
+            height: 150px;
+            background-image: url('background1.jpg'),linear-gradient(45deg, #2ecc71, #27ae60);
+            background-blend-mode: overlay; /*si el color base es claro actua como screen, aclara y si el color base es oscuro actua como multiply oscurece, en este caso el color base sería el gradiante verde y la imagen del paisaje se mezcla encima de ese gradiante usando el modo overlay*/
+        }
+    </style>
+    
+</head>
+<body>
+    <!--Degradados: Usan background-image: linear-gradient() o radial-gradient(). Mezclas: mix-blend-mode para superposiciones, background-blend-mode para fondos.-->
+    
+</body>
+<div class="gradient-linear">hola soy un degradado lineal</div>
+<br><br>
+<div class="gradient-diagonal">hola soy un degradado diagonal con tres colores</div><br><br>
+<div class="gradient-circular">degradado circular, la forma, color1 color2</div><br><br>
+<div class="gradient-ellipse">degradado eliptico</div>
+<br>
+<br>
+<p>PROPIEDADES DE MEZCLA (BLEND MODES)</p>
+<div class="blend-multiply">Background-blend-mode multiply, mezcla fondo con imagen</div><br><br>
+<div class="blend-screen-container">Mix-blen-mode-screen
+    <div class="blend-screen">Mezcla azul sobre amarillo en modo screen. lo hace de manera opuesta al multiply</div><br><br>
+
+
+</div><br><br>
+<div class="blend-overlay">Mezcla con imagen en overlay</div>
+</html>

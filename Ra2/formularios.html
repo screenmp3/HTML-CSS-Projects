@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device, initial-scale=1.0" />
+        <link rel="stylesheet" href="CSS/styleFormulario.css" />
+        <title>Tipos de input</title>
+    </head>
+    <body>
+        <form>
+        <action="enviar" method="post>
+        <h1>Tipos de Input</h1>
+        <h2>Tipo de texto</h2>
+        <label for="nombre">Nombre:</label>
+        <input
+            type="text"
+            id="nombre"
+            placeholder="Ingresa tu nombre"
+            required
+        />
+        <br />
+        <br />
+        <label for="busqueda">Busqueda:</label>
+        <input type="search" name="busqueda" placeholder="Buscar" />
+        <br />
+        <br />
+        <label for="sitio">URL:</label>
+        <input type="url" name="sitio" placeholder="https://ejemplo.com" />
+        <br />
+        <br />
+        <label for="correo">Correo:</label>
+        <input type="search" name="busqueda" placeholder="Buscar" />
+        <br />
+        <br />
+        <label for="contraseña">Contraseña:</label>
+        <input
+            type="password"
+            id="contraseña"
+            placeholder="contraseña"
+            required
+            minlength="8"
+        />
+        <br />
+        <h2>Texto multilinea,atributos name,rows,cols....</h2>
+        <textarea
+            name="comentario"
+            id="comentario"
+            required
+            placeholder="Escribe aqui"
+            rows="5"
+            cols="20"
+        ></textarea>
+        <br />
+        <br />
+        <label for="telefono"> Teléfono:</label>
+        <input
+            type="tel"
+            id="telefono"
+            placeholder="123-456-7890"
+            required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        />
+<br/>
+<br/>
+        <!--Inputs de tipo numerico-->
+        <label for="edad">edad</label>
+        <input
+            type="number"
+            id="edad"
+            placeholder="introduzca su edad"
+            required
+            min="18"
+            max="100"
+            step="1"
+            value="25"
+        />
+        <br/>
+        <br/>
+        <!--Inputs de fecha y hora atributos especificos min,max...-->
+        <label for="nacimiento">Fecha:</label>
+        <input type="date" id="nacimiento"
+            min="1900-01-01" max="2025-12-31"
+        <br/>
+        <br/>
+        <br/>
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora"
+        <br/>
+        <br/>
+        <label for="fechaHora">fechaHora:</label>
+        <input type="datetime-local" id="fechaHora"
+        <br/>
+        <br/>
+        <label for="mes">Mes:</label>
+        <input type="month" id="mes"
+        <br/>
+        <br/>
+        <label for="semana">Semana:</label>
+        <input type="week" id="semana"
+        <br/>
+        <br/>
+        <label for="color">Color::</label>
+        <input type="color" id="color"
+        <br/>
+        <br/>
+        <br/>
+        <label for="id">DNI:</label>
+        <input type="radio" id="id" name="ide">
+        <label for="NRE">NRE:</label>
+        <input type="radio" id="NRE" name="ide">
+        <br/>
+        <br/>
+        <br/>
+        <label for="deporte">Deporte:</label>
+        <input type="checkbox" id="deporte" name="actividad" checked>
+        <label for="musica">Musica:</label>
+        <input type="checkbox" id="musica" name="actividad">
+        <br/>
+        <br/>
+        <br/>
+        <!--El elemento select,option y optgroup para listas desplegables,atributos,name,multiple...-->
+        <label for="fruta">lista desplegable</label>
+        <select name="frutas" id="fruta">
+            <optgroup label="Tropicales">
+                <option value="piña">Piña</option>
+                <option value="mango">Mango</option>
+                <option value="aguacate">Aguacate</option>
+            </optgroup>
+            <optgroup label="Mediterranea">
+                <option value="manzana">Manzana</option>
+                <option value="uva">Uva</option>
+                <option value="melon">Melón</option>
+            </optgroup>
+        </select>
+        <!--El elemento datalist proporciona sugerencia para inputs -->
+        <label for="fruta">datalist</label>
+        <input type="text" list="frutas">
+        <datalist id="frutas">
+            <option value="piña"></option>
+            <option value="mango"></option>
+            <option value="aguacate"></option>
+            <option value="manzana"></option>
+            <option value="uva"></option>
+            <option value="melon"></option>
+        </datalist>
+        </action>
+        </form>
+        <!--Carga de archivos para subida y sus botones, submit,reset,button,imagen etc -->
+<form enctype="multipart/form-data">
+    <label for="archivo">Seleccion de archivos</label>
+    <input type="file" name="archivo" id="archivo" accept=".pdf,.jpg,.pages" multiple>
+    <label for="enviar"></label>
+    <input type="submit" name="enviar"
+        value="enviar">
+</form>
+    </body>
+</html>

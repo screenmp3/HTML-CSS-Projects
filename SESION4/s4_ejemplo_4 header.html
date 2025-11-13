@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header parallax con posicionamiento fixed</title>
+    <style>
+        body{
+            margin: 0;
+            height: 200vh;/*ya sabemos que hace que crezca la pantalla para que se vea scroll*/
+            color: white;
+            text-shadow: 2px 2px 4px black;
+        }
+        .fixed-logo{
+            position:fixed;
+            top: 10px;
+            left: 10px;
+            background-color: white;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .fondo{
+            height: 100vh;
+            width: 100%;
+            background-image: url('fondo.jpeg');
+            background-position: center;/*esta propiedad hace que el centro de la imagen se alinee con el centro del contenedor*/
+            background-size: cover;/*escala la imagen para que cubra completamente el área del elemento, sin distorsionarse*/
+            background-attachment: fixed;/*hace que la imagen de fondo permanezca fija, incluso cuando el usuario hace scroll*/
+            position: relative;
+           
+            header{
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                translate:-50% -50%; 
+                z-index: 2;/*aquí nos aseguramos que el header aparezca encima del fondo*/
+                font-size: 8vw;/*establece el tamaño de fuente unidades relativas al ancho de la ventana del navegador, muy útil para diseños responsivos 1vw equivale a 1% del ancho de la ventana*/
+
+            }
+            
+        }
+        section {
+            height: 400px;
+            color:black;
+            font-size: 20px;
+            text-shadow: none;
+            padding:20px;
+            
+
+            }
+    </style>
+</head>
+<body>
+    <div class="fixed-logo">Logo</div>
+    <div class="fondo">
+        <header>El mundo del Paraguas</header>
+    </div>
+    <section><!--agrupa contenido temático dentro de un documento. Ideal para capítulos-->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores cupiditate inventore dolorum eos vero corrupti at adipisci quasi obcaecati itaque.</p>
+    </section>
+    <div class="fondo">
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>tablas con Pseudo elementos</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                tr {
+                    td {
+                        border: 1px solid gainsboro;
+                        padding: 10px;
+                        &:nth-of-type(1) {
+                            /*primera celda cada linea*/
+                            background-color: yellowgreen;
+                            &::before {
+                                content: "µ";
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            text-align: right;
+                            &::after {
+                                content: "(derecha)";
+                            }
+                        }
+                    }
+                    &:first-of-type {
+                        th {
+                            background-color: aquamarine;
+                            color: royalblue;
+                            &::before {
+                                content: "¥";
+                            }
+                        }
+                    }
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>encabezado1</th>
+                <th>encabezado2</th>
+            </tr>
+            <td>celda1</td>
+            <td>celda2</td>
+        </table>
+    </body>
+</html>

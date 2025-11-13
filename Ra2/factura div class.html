@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="CSS/facturaStyleSequoia.css" />
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <title>Factura TechSolutions S.A</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">Factura #00123-TechSolutions S.A.</div>
+            <div class="factura">
+                <div
+                    class="Detalles"
+                    style="text-align: left; grid-column: span 6"
+                >
+                    Cliente:<strong> Nombre Appelido1 Apellido2</strong>
+                    <br />Dirección: Calle Ficticia 123
+                </div>
+                <div
+                    class="Detalles"
+                    style="text-align: right; grid-column: span 3"
+                >
+                    Fecha:<strong> 20/09/2025</strong><br />Plazo: 30 días
+                </div>
+                <div class="Categoria" style="grid-column: span 2">
+                    <i data-lucide="book-plus" style="padding-right: 2%;"></i>Producto
+                </div>
+                <div class="Categoria" style="grid-column: span 4">
+                    <i data-lucide="book-type" style="padding-right: 1%;"></i>Descripción
+                </div>
+                <div class="Categoria"><i data-lucide="layers" style="padding-right: 4%;"></i>Cantidad</div>
+                <div class="Categoria"><i data-lucide="receipt" style="padding-right: 2%;"></i>Precio</div>
+                <div class="Categoria"><i data-lucide="wallet" style="padding-right: 2%;"></i>Subtotal</div>
+
+                <div class="Producto">
+                    <img
+                        src="https://thumb.pccomponentes.com/w-530-530/articles/1086/10861550/1368-apple-macbook-pro-apple-m4-pro-14-nucleos-48gb-512gb-ssd-gpu-20-nucleos-16-negro-espacial.jpg"
+                        width="40"
+                        height="40"
+                        alt="macbook pro"
+                    />
+                     Macbook Pro M4 Pro 16"
+                </div>
+                <div class="Descripcion">
+                    M4 Pro, 16 pulgadas, 24gb RAM, 512gb SSD
+                </div>
+                <div class="Cantidad">1</div>
+                <div class="Precio">2999,99€</div>
+                <div class="Subtotal">2999,99€</div>
+
+                <div class="Producto" style="background-color: #fafafa;">
+                    <img
+                                                src="https://thumb.pccomponentes.com/w-530-530/articles/1086/10861509/1105-apple-magic-trackpad-superficie-multi-touch-negra.jpg"
+                                                width="30"
+                                                height="30"
+                                                alt="apple magic trackpad"
+                                            />
+                     Magic Trackpad 3
+                </div>
+                <div class="Descripcion" style="background-color: #fafafa;">
+                    3ª Generación. USB-C
+                </div>
+                <div class="Cantidad" style="background-color: #fafafa;">1</div>
+                <div class="Precio" style="background-color: #fafafa;">129,99€</div>
+                <div class="Subtotal" style="background-color: #fafafa;">129,99€</div>
+
+                <div class="Producto">
+                    <img
+                                                src="https://thumb.pccomponentes.com/w-530-530/articles/1076/10761933/1531-samsung-odyssey-oled-g93sc-49-dqhd-240hz-freesync-premium-pro-curva.jpg"
+                                                width="30"
+                                                height="30"
+                                                alt="apple magic trackpad"
+                                            />
+                     Samsung G9
+                </div>
+                <div class="Descripcion">
+                    Monitor OLED 27" 180Hz 2560x1440p
+                </div>
+                <div class="Cantidad">2</div>
+                <div class="Precio">899,99€</div>
+                <div class="Subtotal">1.799,98€</div>
+
+                <div class="Envios">
+                    <i data-lucide="truck" style="margin-right: 8px;"></i>
+                    Seleccione el método de envío
+                    <input
+                        type="radio"
+                        style="margin-left: 4%"
+                        id="id"
+                        name="ide"
+                    />
+                    <label for="id">Recogida en punto autorizado</label>
+                    <input
+                        type="radio"
+                        style="margin-left: 2%"
+                        id="NRE"
+                        name="ide"
+                    />
+                    <label for="NRE">Entrega a domicilio</label>
+                    <label for="proveedor" style="margin-left: 2%"
+                        >Proveedor</label
+                    >
+                    <select
+                        name="Proveedores"
+                        style="margin-left: 1%"
+                        id="proveedor"
+                    >
+                        <optgroup label="🇪🇸Nacionales">
+                            <option value="Amazon">Amazon</option>
+                            <option value="GLS">GLS</option>
+                            <option value="Correos">Correos</option>
+                        </optgroup>
+                        <optgroup label="🇺🇸Internacionales">
+                            <option value="US Mail">U.S Mail</option>
+                            <option value="FedEx">FedEx</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="Precio" style="background-color: #fafafa;">
+                    Subtotal
+                </div>
+                <div class="Subtotal" style="background-color: #fafafa;">4.999,96€</div>
+
+                <div class="Precio">
+                    IVA 21%
+                </div>
+                <div class="Subtotal">1.049,99€</div>
+
+                <div
+                    class="Precio" style="background-color: #fafafa;"
+                     font-weight: 700"
+                >
+                     Total
+                </div>
+                <div
+                    class="Subtotal"
+                    style="background-color: #fafafa; font-weight: 700; font-size: 1.1em"
+                >
+                    6.049,97€
+                </div>
+            </div>
+        </div>
+        <script>
+            lucide.createIcons();
+        </script>
+    </body>
+</html>

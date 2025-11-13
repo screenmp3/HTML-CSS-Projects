@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip-path en CSS</title>
+    <style>
+        .clip-circle{
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(to bottom, #e74c3c,#c0392b);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+        }
+        .clip-ellipse{
+            border: 3px solid blue;
+            width: 200px;
+            height: 100px;
+            clip-path: ellipse(25% 40% at 50% 50%);
+
+        }
+        .clip-polygon{
+            border: 3px solid blue;
+            width: 200px;
+            height: 100px;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+
+        }
+    </style>
+</head>
+<body>
+    <P>Clip-path basico. Ejemplo 1: semicirculo</P>
+    <div class="clip-circle"> Recorta a un triangulo con degradado rojo</div>
+    <br>
+    <p>Clip-path con imágenes</p>
+    <img class="clip-ellipse"   src="background1.jpg" alt="ellipse"><br>
+    <p>Clip-path poligono complejo</p>
+    <img class="clip-polygon" src="background1.jpg" alt="ellipse">
+    
+</body>
+</html>

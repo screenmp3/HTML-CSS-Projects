@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em y Rem. Uso del :root</title>
+    <style>
+       
+        :root{
+            --base-font-size:18px;
+            --root-font-size:16px;
+        }
+        .parent-em{
+            border: 1px solid black;
+            font-size: var(--base-font-size);
+            background: red;
+            padding: 10px;
+            border-radius: 5px;
+            .text-em{
+                font-size: 1.5em;
+            }
+            
+        }
+        html {
+            font-size: var(--root-font-size);
+        }
+         /*las variables css, definidas en el pseudo-elemento :root, permiten almacenar valores reutilizables, como tamaños de fuente, para usar con unidades relativas como em y rem. em es relativa al tamaño de fuente del elemento padre (1 em= tamaño actual) .rem es relativa al tamaño de fuente raiz definido en :root o html. Son ideales para diseños escalables y accesibles.
+         */
+         .header-rem{
+            font-size: 2rem;
+            color: #8e44ad;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+         }
+
+    </style>
+</head>
+<body>
+    <div class="parent-em">
+        <p class="text-em"> Texto de 1.5em equivale (27px) 18px*1.5=27px</p>
+    </div>
+    <h3 class="header-rem">Encabezado 2 rem(equivale a 16*2)</h3>
+   
+</body>
+</html>

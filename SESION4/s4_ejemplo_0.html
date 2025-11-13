@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento</title>
+    <style>
+        body {
+      margin: 0;
+      font-family: sans-serif;
+      height: 200vh; /* para poder hacer scroll */
+    
+      /*.fixed-box {
+       position: fixed;
+      top: 10px;
+      left: 10px;
+      border: 2px solid green;
+      padding: 15px;
+      background-color: #e0ffe0;
+      z-index: 1000;
+    }*/
+     /*.relative-box {
+      position: relative;
+      top: 40px;
+      left: 40px;
+      border: 2px solid blue;
+      padding: 20px;
+      margin: 20px;
+      background-color: #e0f0ff;
+    }*/
+
+     .absolute-container {
+      position: relative;
+      border: 2px dashed gray;
+      margin: 20px;
+      padding: 40px;
+      background-color: #f9f9f9;
+      height: 200px;
+    
+
+    .absolute-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      border: 2px solid red;
+      padding: 10px;
+      background-color: #ffe0e0;
+    }
+    }
+  }
+    </style>
+</head>
+<body>
+  <div class="fixed-box">
+    Caja <strong>fixed</strong><br>(Siempre visible)
+    <!--Está pegada a la ventana del navegados, arriba a la izquierda, permanece visible cuando haces scroll-->
+  </div>
+  <div class="relative-box">
+    Caja <strong>relative</strong><br>(Desplazada 20px desde su lugar normal)
+    <!--Se mueve un poco desde su posición original pero sigue ocupando espacio-->
+  </div>
+  <div class="absolute-container">
+    Contenedor con `relative`
+    <div class="absolute-box">
+      Caja <strong>absolute</strong><br>(Posicionada dentro del contenedor)
+    </div>
+  </div>
+  <!--Está posicionada dentro del contenedor gris(que tiene position relative)-->
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículo con posicionamiento y columnas. Representa un contenido independiente, como un post de blog</title>
+    <style>
+        body{
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+             }
+             .contenedor{
+                position: relative;/*relative para posicionar el elemento flotante*/
+                width: 80%;
+                border: 1px solid black;
+                max-width: 800px;
+                margin: 20px auto;
+                article{
+                    background-color: antiquewhite;
+                    padding: 25px;
+                    columns: 2;
+                    column-gap: 30px;
+                    column-rule: 2px dashed #ccc;
+                    text-shadow: 2px 2px 1px rgba(0,0,0,0.2); 
+                    box-shadow: 10px 10px 8px rgba(0,0,0,0.2);
+                    border-radius: 10px;
+                                    }
+               .nota-flotante { 
+                    position: absolute;
+                    top: 30px;
+                    right: -12px;
+                    background-color: yellow;
+                    padding: 5px;
+                    clip-path: polygon(0 0, 100% 0, 100% 85%, 10% 100%);/* recorta el elemento según la forma definida por los puntos del polígono, rotate gira el elemento 8 grados*/
+                    transform: rotate(8deg); 
+                    transition: transform 0.3s ease; 
+                    &:hover{
+                        transform: rotate(0deg) scale(1.1); 
+                    }
+
+               }
+
+             }
+    </style>
+</head>
+<body>
+  <div class="contenedor">
+        <article>
+            <h2>Artículo Independiente</h2>
+            <p>lorem30.</p>
+            <p>lorem35</p>
+        </article>
+        <div class="nota-flotante">Nota Flotante</div>
+    </div>  
+    
+</body>
+</html>

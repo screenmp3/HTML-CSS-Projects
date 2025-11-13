@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplo Sticky vs Fixed</title>
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: crimson;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  section {
+    margin-top: 60px; /* Para que el contenido no quede debajo del header fijo */
+    padding: 20px;
+    height: 1500px; /* mucho contenido para hacer scroll */
+    background: #f4f4f4;
+  }
+  section{
+    border: 1px solid black;
+  }
+
+  .sticky-title {
+    position: sticky;
+    top: 10px;/*El header (fixed) siempre se mantiene visible en la parte superior, sin importar cuánto bajes.
+
+El h2 (sticky) sube normalmente hasta que llega al top: 10px, y ahí se queda “pegado” mientras el contenedor <section> siga visible.
+Cuando termina la sección, deja de estar pegado.*/
+    background: gold;
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+    <!--position: fixed → El elemento queda fijo en la pantalla (viewport), sin importar el scroll.
+Siempre se muestra en el mismo lugar.
+
+position: sticky → El elemento se comporta como relative hasta que el scroll llega a cierto punto, y entonces “se pega” (se vuelve fijo) dentro de su contenedor padre.-->
+
+  <header>
+    Header fijo con <code>position: fixed</code>
+  </header>
+
+  <section>
+    <h2 class="sticky-title">Título con <code>position: sticky</code>
+    </h2>
+    <p>Desplázate hacia abajo para ver cómo el título se “pega” cuando llega a la parte superior, 
+       pero solo dentro de esta sección.</p>
+  </section>
+
+</body>
+</html>

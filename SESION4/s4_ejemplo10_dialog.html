@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Modal nativo(ventana emergente usando el elemento dialog) con
+            posicionamiento y transiciones
+        </title>
+        <style>
+            dialog {
+                border: none;
+                padding: 20px;
+                box-shadow: 10px 10px 8px rgba(255, 255, 255, 0.5);
+                opacity: 0; /*cuando el díalogo no está abierto no se aplica estilos y no se muestra opacidad invisible*/
+            }
+            dialog[open] {
+                opacity: 1; /*cuando se abre el modal, se aplica la opacidad 1, la opacidad permite crear efectos de transición o animación por ejemplo transition: opacity 0.3s; */
+            }
+            dialog::backdrop {
+                /*es un selector que solo existe para dialog, crea un fondo negro con 50% de transparencia lo que oscurece la página detrás del modal*/
+                background: rgba(0, 0, 0, 0.5);
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="document.getElementById('modal').showModal()">
+            Abrir Modal
+            <!--Cuando haces clic, ejecutas JavaScript para abrir el diálogo(document, representa el documento html cargado en el navegador(DOM), es el punto de partida para acceder, modificar o escuchar eventos en los elementos de la página, getElementById('modal') este método busca un elemento html que tenga el atriburto id='modal'), el método showModal, muestra el dialog, centrado en la pantalla, bloqueando la interacción con el resto de la página(comportamiento modal), hay otra función que es show(muestra el díalogo sin bloquear la pantalla)-->
+        </button>
+        <dialog id="modal">
+            <p>Contenido del diálogo.</p>
+
+            <button onclick="document.getElementById('modal').close()">
+                Cerrar
+            </button>
+        </dialog>
+    </body>
+</html>
