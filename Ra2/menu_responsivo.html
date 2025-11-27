@@ -1,56 +1,77 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>menu responisvo</title>
-        <link rel="stylesheet" href="CSS/formularioTabla.css" />
-        <style>
-            .menu {
-                display: flex;
-                gap: 20px;
-                border: 1px solid black;
-                justify-content: center;
-                padding: 20px;
-                background-color: yellow;
-                a {
-                    background-color: red;
-                    padding: 20px;
-                    border-radius: 10px;
-                    flex: 1 1 280px;
-                    text-align: center;
-                    color: white;
-                    transition: transform 0.5s ease;
-                    font-family: fantasy;
-                    &:hover {
-                        transform: rotate(2deg);
-                        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-                        color: orangered;
-                    }
-                }
-                @media (width<768px) {
-                    & {
-                        flex-direction: column;
-                        display: none; /*muy comun en moviles , oculto hasta q se pulse un boton.*/
-                        position: absolute;
-                        top: 50px;
-                        left: 0;
-                        width: 30%;
-                        #menu-des:checked + label + & {
-                            display: flex;
-                        }
-                    }
-                }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menu responsivo</title>
+    <link rel="stylesheet" href="CSS/formularioTabla.css" />
+    <style>
+      .menu {
+        display: flex;
+        gap: 20px;
+        border: 1px solid black;
+        justify-content: center;
+        padding: 20px;
+        background-color: yellow;
+        a {
+          background-color: red;
+          padding: 20px;
+          border-radius: 10px;
+          flex: 1 1 280px;
+          text-align: center;
+          color: white;
+          transition: transform 0.5s ease;
+          font-family: fantasy;
+          &:hover {
+            transform: rotate(2deg);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            color: orangered;
+          }
+        }
+        @media (width<768px) {
+          & {
+            flex-direction: column;
+            display: none; /*muy comun en moviles , oculto hasta q se pulse un boton.*/
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 30%;
+            #menu-des:checked + label + & {
+              display: flex;
+              animation: desplazaderecha 1s ease-in-out;
             }
-        </style>
-    </head>
-    <body>
-        <input type="checkbox" id="menu-des" style="display: none" />
-        <label for="menu-des" class="menu-boton"></label>
-        <nav class="menu">
-            <a href="a">Inicio</a>
-            <a href="a">Servicios</a>
-            <a href="a">Contacto</a>
-        </nav>
-    </body>
+          }
+        }
+        .menu-boton {
+          display: none;
+          @media (width<768px) {
+            & {
+              display: block;
+              font-size: 28px;
+              cursor: pointer;
+            }
+          }
+        }
+        @keyframes desplazaderecha {
+          from {
+            transform: translateX(-50px);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="menu-des" style="display: none" />
+    <label for="menu-des" class="menu-boton">☰</label>
+    <nav class="menu">
+      <a href="a">Inicio</a>
+      <a href="a">Servicios</a>
+      <a href="a">Contacto</a>
+    </nav>
+  </body>
 </html>

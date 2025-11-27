@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica,
+    Arial, sans-serif;
+  font-size: 14px;
+}
+.menu {
+  display: flex;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(70, 110, 110);
+  align-items: center;
+  z-index: 999;
+  justify-content: center;
+  padding: 0 20px;
+  opacity: 0.85;
+}
+
+.menu div {
+  display: flex;
+}
+.menu a {
+  color: lightblue;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 10px 50px;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+  font-weight: bold;
+}
+.menu a:hover {
+  opacity: 1;
+  color: greenyellow;
+  text-decoration: underline;
+  transition: 0.3s ease;
+}
+
+.menu input {
+  display: none;
+  overflow: hidden;
+}
+label {
+  position: absolute;
+  left: 20px;
+  display: none;
+  cursor: pointer;
+}
+header {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+header img {
+  filter: blur(2px);
+  width: 100%;
+}
+
+header::before {
+  content: "La tecnología a tu alcance";
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: cornflowerblue;
+  font-size: 4rem;
+  z-index: 10;
+  text-align: center;
+  padding: 20px 40px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.galeria {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 30%;
+  padding: 20px;
+  background-color: rgb(70, 110, 110);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.galeria .elementos {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+.galeria .img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.galeria .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.galeria .texto {
+  padding: 15px;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+.galeria .elementos:hover .texto {
+  opacity: 1;
+  background-color: white;
+  transform: translateY(0);
+}
+.galeria .elementos:hover .img {
+  opacity: 1;
+}
+.noticias {
+  width: 100%;
+  margin: 20px 0;
+  padding: 0 10%;
+}
+
+.noticias .noticia {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+}
+
+.noticias .img {
+  flex: 0 0 30%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.noticias .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.noticias .texto {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.noticias .texto h2 {
+  font-weight: bold;
+  position: relative;
+  font-size: 28px;
+  padding-bottom: 1.5%;
+}
+footer {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(70, 110, 110);
+  align-items: center;
+  justify-content: center;
+  color: lightblue;
+}
+@media (max-width: 768px) {
+  label {
+    position: absolute;
+    left: 20px;
+    display: block;
+  }
+
+  .menu div {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(70, 110, 110);
+    flex-direction: column;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.4s ease-in-out,
+      padding 0.4s ease-in-out;
+  }
+
+  .menu input:checked + div {
+    max-height: 300px;
+    padding: 20px 0;
+  }
+
+  .menu a {
+    display: flex;
+    justify-content: center;
+    padding: 15px 20px;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      opacity 0.3s ease 0.1s,
+      transform 0.3s ease 0.1s;
+  }
+
+  .menu input:checked + div a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

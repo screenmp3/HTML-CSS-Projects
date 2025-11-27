@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: ghostwhite;
+}
+
+.contenedor {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+.cabecera {
+  position: fixed;
+  display: flex;
+  top: 0;
+  background-color: rgb(51, 51, 51);
+  color: white;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  height: 8%;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu {
+  display: contents;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  border-radius: 8px;
+}
+
+.menu a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 50%;
+  background-color: gray;
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 50%;
+  background-color: gray;
+  transition: right 0.4s ease;
+  z-index: -1;
+}
+
+.menu a:hover::before {
+  left: 0;
+}
+
+.menu a:hover::after {
+  right: 0;
+}
+
+.pie-de-pagina {
+  position: fixed;
+  bottom: 0;
+  background-color: rgb(51, 51, 51);
+  width: 100%;
+  height: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.pie-de-pagina div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.pie-de-pagina img {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.pie-de-pagina img:hover {
+  transform: scale(1.2);
+}
+
+.pie-de-pagina input {
+  width: 0;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+  background-color: white;
+}
+
+.pie-de-pagina div:hover input {
+  width: 250px;
+  opacity: 1;
+  transform: translateX(-30px);
+}
+
+.pie-de-pagina div:hover ::placeholder {
+  padding-left: 20px;
+}
+
+.noticias {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 8%;
+  padding-bottom: 8%;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.noticia-destacada {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.noticia {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  flex: 1 1 calc(25% - 15px);
+  min-width: 280px;
+}
+.noticia:nth-child(6) {
+  flex: 1 1 100%;
+  width: 100%;
+}
+.imagen {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.noticia-destacada .imagen {
+  height: 300px;
+}
+
+.titulo {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.noticia-destacada .titulo {
+  font-size: 24px;
+}
+
+.descripcion {
+  line-height: 1.4;
+  flex-grow: 1;
+  margin: 0 10px 10px 10px;
+}
