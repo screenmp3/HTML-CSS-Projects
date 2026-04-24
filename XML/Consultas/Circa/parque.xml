@@ -1,0 +1,155 @@
+<parque_atracciones>
+  <atracciones>
+    <atraccion id="A1">
+      <nombre>Montaña Rusa Dragón</nombre>
+      <tipo>Montaña Rusa</tipo>
+      <altura_minima>140</altura_minima>
+      <capacidad>24</capacidad>
+      <duracion>120</duracion>
+      <popularidad>95</popularidad>
+      <averias>
+          <averia fecha="2024-05-10">Mantenimiento programado</averia>
+          <averia fecha="2024-07-22">Fallo en el sistema de frenado</averia>
+      </averias>
+    </atraccion>
+    <atraccion id="A2">
+      <nombre>Caída Libre Infernal</nombre>
+      <tipo>Caída Libre</tipo>
+      <altura_minima>150</altura_minima>
+      <capacidad>16</capacidad>
+      <duracion>60</duracion>
+      <popularidad>90</popularidad>
+        <averias>
+            <averia fecha="2024-06-01">Mantenimiento preventivo</averia>
+        </averias>
+    </atraccion>
+    <atraccion id="A3">
+      <nombre>Río Salvaje</nombre>
+      <tipo>Acuática</tipo>
+      <altura_minima>110</altura_minima>
+      <capacidad>8</capacidad>
+      <duracion>300</duracion>
+      <popularidad>85</popularidad>
+      <averias/>
+    </atraccion>
+    <atraccion id="A4">
+      <nombre>Carrusel Encantado</nombre>
+      <tipo>Familiar</tipo>
+      <altura_minima>0</altura_minima>
+      <capacidad>40</capacidad>
+      <duracion>180</duracion>
+      <popularidad>70</popularidad>
+      <averias/>
+    </atraccion>
+    <atraccion id="A5">
+      <nombre>Tren Fantasma</nombre>
+      <tipo>Suspense</tipo>
+      <altura_minima>120</altura_minima>
+      <capacidad>12</capacidad>
+      <duracion>240</duracion>
+      <popularidad>80</popularidad>
+      <averias>
+        <averia fecha="2024-08-15">Problemas eléctricos</averia>
+      </averias>
+    </atraccion>
+     <atraccion id="A6">
+      <nombre>Sillas Voladoras</nombre>
+      <tipo>Familiar</tipo>
+      <altura_minima>100</altura_minima>
+      <capacidad>30</capacidad>
+      <duracion>150</duracion>
+      <popularidad>75</popularidad>
+      <averias/>
+    </atraccion>
+  </atracciones>
+  <empleados>
+    <empleado id="E1">
+      <nombre>Juan Pérez</nombre>
+      <puesto>Operador</puesto>
+      <atraccion_asignada>A1</atraccion_asignada>
+      <experiencia>5</experiencia>
+    </empleado>
+    <empleado id="E2">
+      <nombre>María López</nombre>
+      <puesto>Mantenimiento</puesto>
+      <atraccion_asignada>A1</atraccion_asignada>
+      <experiencia>10</experiencia>
+    </empleado>
+    <empleado id="E3">
+      <nombre>Carlos García</nombre>
+      <puesto>Operador</puesto>
+      <atraccion_asignada>A2</atraccion_asignada>
+      <experiencia>2</experiencia>
+    </empleado>
+    <empleado id="E4">
+      <nombre>Ana Rodríguez</nombre>
+      <puesto>Taquillera</puesto>
+      <atraccion_asignada></atraccion_asignada>
+      <experiencia>3</experiencia>
+    </empleado>
+        <empleado id="E5">
+      <nombre>Pedro Martinez</nombre>
+      <puesto>Mantenimiento</puesto>
+      <atraccion_asignada>A5</atraccion_asignada>
+      <experiencia>7</experiencia>
+    </empleado>
+  </empleados>
+  <visitantes>
+      <visitante>
+          <nombre>Luisa Gomez</nombre>
+          <edad>28</edad>
+          <altura>165</altura>
+          <preferencias>
+              <preferencia tipo="Montaña Rusa"/>
+              <preferencia tipo="Suspense"/>
+          </preferencias>
+      </visitante>
+      <visitante>
+          <nombre>Javier Torres</nombre>
+          <edad>15</edad>
+          <altura>155</altura>
+           <preferencias>
+              <preferencia tipo="Caída Libre"/>
+          </preferencias>
+      </visitante>
+      <visitante>
+          <nombre>Sofia Ramirez</nombre>
+          <edad>8</edad>
+          <altura>120</altura>
+          <preferencias>
+               <preferencia tipo="Familiar"/>
+          </preferencias>
+      </visitante>
+  </visitantes>
+    <restaurantes>
+        <restaurante>
+            <nombre>El Dragon Hambriento</nombre>
+            <tipo>Hamburguesería</tipo>
+            <capacidad>50</capacidad>
+            <valoracion>4</valoracion>
+        </restaurante>
+        <restaurante>
+            <nombre>Pizza Voladora</nombre>
+            <tipo>Pizzeria</tipo>
+            <capacidad>35</capacidad>
+            <valoracion>5</valoracion>
+        </restaurante>
+    </restaurantes>
+    <eventos>
+        <evento fecha="2024-12-24">
+            <nombre>Navidad Mágica</nombre>
+            <tipo>Espectáculo</tipo>
+            <atracciones_relacionadas>
+                <atraccion_id>A1</atraccion_id>
+                <atraccion_id>A4</atraccion_id>
+            </atracciones_relacionadas>
+        </evento>
+        <evento fecha="2024-10-31">
+           <nombre>Noche de Brujas</nombre>
+            <tipo>Temático</tipo>
+            <atracciones_relacionadas>
+                <atraccion_id>A5</atraccion_id>
+            </atracciones_relacionadas>
+        </evento>
+    </eventos>
+</parque_atracciones>
